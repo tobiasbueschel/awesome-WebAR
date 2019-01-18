@@ -35,6 +35,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 - [threex.webar](https://github.com/jeromeetienne/threex.webar) - three.js extensions for Augmented Reality.
 - [html5-augmented-reality](https://github.com/dontcallmedom/html5-augmented-reality) - Building a simple HTML5-based augmented reality Web app.
 - [webxr](https://github.com/immersive-web/webxr) - JavaScript API for accessing VR and AR devices, including sensors and head-mounted displays.
+- [webxr-polyfill](https://github.com/mozilla/webxr-polyfill) - A polyfill and example code for building augmented reality (AR) and virtual reality (VR) applications using WebXR.
 
 ### Articles
 - ["Area Learning with Multi-Markers in AR.js - For a Larger & More Stable Augmented Reality"](https://medium.com/arjs/area-learning-with-multi-markers-in-ar-js-1ff03a2f9fbe)
