@@ -34,6 +34,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 - [WebARonTango](https://github.com/google-ar/WebARonTango) - A proposal to provide Augmented Reality (AR) capabilities to the web in the form of a prototype on top of WebVR built in Chromium.
 - [threex.webar](https://github.com/jeromeetienne/threex.webar) - three.js extensions for Augmented Reality.
 - [html5-augmented-reality](https://github.com/dontcallmedom/html5-augmented-reality) - Building a simple HTML5-based augmented reality Web app.
+- [webxr](https://github.com/immersive-web/webxr) - JavaScript API for accessing VR and AR devices, including sensors and head-mounted displays.
 
 ### Articles
 - ["Area Learning with Multi-Markers in AR.js - For a Larger & More Stable Augmented Reality"](https://medium.com/arjs/area-learning-with-multi-markers-in-ar-js-1ff03a2f9fbe)
