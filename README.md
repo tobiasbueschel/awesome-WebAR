@@ -24,6 +24,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 ## Contents
 - [Projects](#projects)
 - [Articles](#articles)
+- [Others](#others)
 
 ### Projects
 - [AR.js](https://github.com/jeromeetienne/AR.js/) - Efficient Augmented Reality for the Web - 60fps on mobile.
@@ -52,3 +53,6 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
   by [@jerome_etienne](https://twitter.com/jerome_etienne)
 - ["Augmented Reality in 10 Lines of HTML - AR.js with a-frame magic"](https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf)
   by [@AndraConnect](https://twitter.com/AndraConnect)
+
+### Others
+- [Amazon Sumerian](https://aws.amazon.com/sumerian/) - Easily create and run browser-based 3D, augmented reality (AR), and virtual reality (VR) applications.
