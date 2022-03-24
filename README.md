@@ -39,6 +39,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 - [exokit](https://github.com/webmixedreality/exokit) - Native VR/AR/XR engine for JavaScript.
 - [React-Web-AR](https://github.com/nitin42/React-Web-AR) - AR with React.
 - [AR-Examples](https://github.com/stemkoski/AR-Examples) - A collection of AR examples built with three.js and AR.js.
+- [mind-ar-js](https://github.com/hiukim/mind-ar-js) - Web Augmented Reality. Image Tracking, Face Tracking. Tensorflow.js.
 
 ### Articles
 - ["Area Learning with Multi-Markers in AR.js - For a Larger & More Stable Augmented Reality"](https://medium.com/arjs/area-learning-with-multi-markers-in-ar-js-1ff03a2f9fbe)
