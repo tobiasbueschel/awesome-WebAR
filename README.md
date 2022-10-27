@@ -27,7 +27,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 - [Others](#others)
 
 ### Projects
-- [AR.js]([https://github.com/jeromeetienne/AR.js/](https://github.com/AR-js-org/AR.js)) - Efficient Augmented Reality for the Web - 60fps on mobile.
+- [AR.js](https://github.com/AR-js-org/AR.js) - Image tracking, Location Based AR, Marker tracking. All on the Web.
 - [argon](https://github.com/argonjs/argon) - An open-standards augmented reality platform for the web.
 - [three.ar.js](https://github.com/google-ar/three.ar.js) - A helper three.js library for building AR web experiences that run in WebARonARKit and WebARonARCore.
 - [WebARonARKit](https://github.com/google-ar/WebARonARKit) - An experimental app for iOS that lets developers create Augmented Reality (AR) experiences using web technologies.
