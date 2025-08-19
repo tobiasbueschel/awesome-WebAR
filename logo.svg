@@ -1,45 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
   <title>Awesome WebAR</title>
-  <desc>Wordmark and icon expressing augmented reality on the web: a wireframe cube hovering above a tracked plane, with a modern WebXR-themed gradient.</desc>
+  <desc>Animated wordmark showing a wireframe cube hovering over a tracked plane with a pulsing hit-test reticle to represent Web Augmented Reality.</desc>
 
   <defs>
-    <linearGradient id="grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Gradients -->
+    <linearGradient id="g-primary" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6C63FF"/>
       <stop offset="100%" stop-color="#23D5AB"/>
     </linearGradient>
-    <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="g-accent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00C6FF"/>
       <stop offset="100%" stop-color="#0072FF"/>
     </linearGradient>
+    <radialGradient id="g-reticle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
 
-    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+    <!-- Glow -->
+    <filter id="f-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Perspective grid pattern (stroked lines) -->
+    <pattern id="p-grid" width="24" height="16" patternUnits="userSpaceOnUse" patternTransform="skewX(-12) scale(1,1)">
+      <path d="M0 0 H24 M0 16 H24" style="stroke: var(--grid)" stroke-width="1" fill="none"/>
+      <path d="M0 0 V16 M12 0 V16 M24 0 V16" style="stroke: var(--grid)" stroke-width="1" fill="none"/>
+    </pattern>
   </defs>
 
   <style>
     :root {
-      --fg: #0F172A; /* slate-900 */
-      --muted: #475569; /* slate-600 */
-      --grid: #CBD5E1; /* slate-300 */
+      --fg: #0F172A;          /* slate-900 */
+      --muted: #475569;       /* slate-600 */
+      --grid: #CBD5E1;        /* slate-300 */
       --grid-strong: #94A3B8; /* slate-400 */
-      --accent: #6C63FF;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --fg: #E5E7EB; /* slate-200 */
-        --muted: #94A3B8; /* slate-400 */
-        --grid: #334155; /* slate-700 */
+        --fg: #E5E7EB;          /* slate-200 */
+        --muted: #9CA3AF;       /* gray-400 */
+        --grid: #334155;        /* slate-700 */
         --grid-strong: #475569; /* slate-600 */
       }
     }
 
-    .wordmark-small {
+    .word-small {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
       font-size: 28px;
       font-weight: 700;
@@ -47,9 +58,9 @@
       fill: var(--muted);
       text-transform: uppercase;
     }
-    .wordmark-large {
+    .word-large {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-      font-size: 92px;
+      font-size: 100px;
       font-weight: 800;
       letter-spacing: 1px;
     }
@@ -58,48 +69,71 @@
       font-size: 18px;
       fill: var(--muted);
     }
+
+    /* CSS animations as a progressive enhancement; SMIL fallbacks are applied below */
+    @keyframes pulse {
+      0% { opacity: 0.7; transform: scale(0.9); }
+      70% { opacity: 0.0; transform: scale(1.35); }
+      100% { opacity: 0.0; transform: scale(1.35); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
   </style>
 
-  <!-- Left icon: tracked plane + wireframe cube -->
+  <!-- Left illustration: tracked plane + reticle + cube -->
   <g transform="translate(80,40)">
-    <!-- AR tracked plane (subtle perspective grid) -->
-    <g transform="translate(0,160) rotate(-10)">
-      <rect x="-10" y="-10" width="260" height="110" rx="10" ry="10" fill="none" stroke="var(--grid-strong)" stroke-width="1.2"/>
-      <!-- horizontal lines -->
-      <path d="M 0 0 H 240 M 0 16 H 240 M 0 32 H 240 M 0 48 H 240 M 0 64 H 240 M 0 80 H 240" fill="none" stroke="var(--grid)" stroke-width="1"/>
-      <!-- vertical lines -->
-      <path d="M 0 0 V 96 M 24 0 V 96 M 48 0 V 96 M 72 0 V 96 M 96 0 V 96 M 120 0 V 96 M 144 0 V 96 M 168 0 V 96 M 192 0 V 96 M 216 0 V 96" fill="none" stroke="var(--grid)" stroke-width="1"/>
+    <!-- Subtle browser corner brackets to hint "web" -->
+    <g style="stroke: var(--grid-strong)" stroke-width="3" opacity="0.6">
+      <path d="M 10 10 H 50 M 10 10 V 50" fill="none"/>
+      <g transform="translate(300,220) rotate(180)">
+        <path d="M 10 10 H 50 M 10 10 V 50" fill="none"/>
+      </g>
     </g>
 
-    <!-- Wireframe cube hovering above the plane -->
-    <g transform="translate(60,10)">
-      <!-- back face -->
-      <path d="M 95 40 L 155 40 L 155 100 L 95 100 Z" fill="none" stroke="url(#grad-primary)" stroke-width="2" opacity="0.9"/>
-      <!-- front face -->
-      <path d="M 65 70 L 125 70 L 125 130 L 65 130 Z" fill="none" stroke="url(#grad-primary)" stroke-width="2.4" filter="url(#soft-glow)"/>
-      <!-- connectors -->
-      <path d="M 65 70 L 95 40 M 125 70 L 155 40 M 125 130 L 155 100 M 65 130 L 95 100" fill="none" stroke="url(#grad-accent)" stroke-width="2"/>
-      <!-- floating sparkle -->
-      <circle cx="160" cy="25" r="3" fill="url(#grad-accent)"/>
-      <circle cx="52" cy="52" r="2" fill="url(#grad-primary)"/>
+    <!-- Perspective plane -->
+    <g transform="translate(0,165) rotate(-12)">
+      <rect x="-8" y="-8" width="300" height="130" rx="12" ry="12" fill="none" style="stroke: var(--grid-strong)" stroke-width="1.5"/>
+      <rect x="0" y="0" width="284" height="114" fill="url(#p-grid)" opacity="0.85"/>
+    </g>
+
+    <!-- Hit-test reticle (pulsing rings) -->
+    <g transform="translate(205,95)" opacity="0.8">
+      <circle r="26" fill="url(#g-reticle)" style="animation: pulse 2.4s ease-out infinite"/>
+      <circle r="12" fill="none" stroke="url(#g-accent)" stroke-width="2">
+        <animate attributeName="r" values="10;13;10" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M -18 0 H -30 M 18 0 H 30 M 0 -18 V -30 M 0 18 V 30" stroke="url(#g-accent)" stroke-width="2"/>
+    </g>
+
+    <!-- Wireframe cube hovering -->
+    <g transform="translate(70,0)">
+      <g id="cube" filter="url(#f-glow)">
+        <!-- back face -->
+        <path d="M 115 40 L 175 40 L 175 100 L 115 100 Z" fill="none" stroke="url(#g-primary)" stroke-width="2" opacity="0.9"/>
+        <!-- front face -->
+        <path d="M 85 70 L 145 70 L 145 130 L 85 130 Z" fill="none" stroke="url(#g-primary)" stroke-width="2.6"/>
+        <!-- connectors -->
+        <path d="M 85 70 L 115 40 M 145 70 L 175 40 M 145 130 L 175 100 M 85 130 L 115 100" fill="none" stroke="url(#g-accent)" stroke-width="2"/>
+      </g>
+      <!-- float animation -->
+      <animateTransform xlink:href="#cube" attributeName="transform" attributeType="XML" type="rotate" from="0 130 85" to="360 130 85" dur="18s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <!-- Wordmark on the right -->
-  <g transform="translate(360,90)">
-    <text class="wordmark-small" x="0" y="0">Awesome</text>
-    <text class="wordmark-large" x="0" y="85" fill="url(#grad-primary)">Web<tspan dx="14" fill="url(#grad-accent)">AR</tspan></text>
-    <text class="tagline" x="2" y="120">A curated list of tools, platforms, and learning resources</text>
+  <!-- Wordmark -->
+  <g transform="translate(400,95)">
+    <text class="word-small" x="0" y="0">Awesome</text>
+    <text class="word-large" x="0" y="92" fill="url(#g-primary)">Web<tspan dx="12" fill="url(#g-accent)">AR</tspan></text>
+    <text class="tagline" x="2" y="128">A curated list of tools, platforms, and learning resources</text>
   </g>
 
-  <!-- Subtle corner brackets hinting at AR targeting -->
-  <g transform="translate(330,62)" stroke="var(--grid-strong)" stroke-width="3" opacity="0.65">
-    <path d="M 0 0 H 30 M 0 0 V 30" fill="none"/>
-  </g>
-  <g transform="translate(1130,210) rotate(180)" stroke="var(--grid-strong)" stroke-width="3" opacity="0.65">
-    <path d="M 0 0 H 30 M 0 0 V 30" fill="none"/>
+  <!-- Decorative sparkles -->
+  <g fill="url(#g-accent)" opacity="0.9">
+    <circle cx="372" cy="66" r="3"/>
+    <circle cx="348" cy="52" r="2"/>
   </g>
 
 </svg>
-
-
