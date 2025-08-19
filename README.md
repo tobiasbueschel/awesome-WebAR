@@ -1,8 +1,8 @@
-<h1 align="center">
-Awesome WebAR
-</h1>
-
 <div align="center">
+
+<p align="center">
+  <img src="logo.svg" alt="Awesome WebAR" width="860">
+</p>
 
 <p align="center">
   A curated list of awesome WebAR projects, resources, tools and more.
