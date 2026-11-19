@@ -49,6 +49,7 @@ Please check the <a href="https://github.com/tobiasbueschel/awesome-WebAR/blob/m
 - [8th Wall](https://www.8thwall.com/) - WebAR platform for creating AR experiences that work on any device.
 - [Zappar](https://www.zappar.com/) - WebAR platform with face tracking, image tracking, and world tracking.
 - [Blippar](https://www.blippar.com/) - AR platform with WebAR capabilities.
+- [Vi3w](https://www.vi3w.net/?utm_source=awesome-webar&utm_medium=community&utm_campaign=vi3w-launch&utm_content=v8w-01) - Browser AR tool that turns a GLB model into a link and QR code for floor, image, face and location AR.
 - [WebAR.rocks](https://webar.rocks/) - WebAR browser and platform.
 - [WebARonARKit](https://github.com/google-ar/WebARonARKit) - An experimental app for iOS that lets developers create Augmented Reality (AR) experiences using web technologies.
 - [WebARonARCore](https://github.com/google-ar/WebARonARCore) - An experimental app for Android that lets developers create Augmented Reality (AR) experiences using web technologies.
